@@ -12,9 +12,13 @@ body {}
   padding: 0 8px 0 5px;
 }
 
+.row>* {
+  min-width: fit-content;
+}
+
 .header {
-  padding: 1em;
-  background-color: #f0f0f0;
+  padding: 2em;
+  background-color: color-mix(in srgb, black 8%, white);
 }
 
 .name {
@@ -49,6 +53,77 @@ body {}
   padding: 0 20px 0 0px;
 }
 
+.content {
+  padding: 2em;
+  background-color: color-mix(in srgb, black 2%, white);
+  display: flex;
+}
+
+.section-title {
+  text-transform: uppercase;
+  color: #1388e8;
+}
+
+.sub-section-title {
+  text-transform: uppercase;
+  color: #636363;
+}
+
+.descript {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #868686;
+}
+
+::marker {
+  content: '»';
+  font-size: 1.5em;
+}
+
+li {
+  padding-inline-start: 10px;
+}
+
 .badge {
-  background-color: lighten(var(--primary-color), 50%);
+  background-color: color-mix(in srgb, var(--primary-color) 80%, white);
+  border-radius: 4pc;
+  margin: 7px 0 0 1em;
+}
+
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--primary-color);
+  /* The typwriter cursor */
+  white-space: wrap;
+  /* Keeps the content on a single line */
+  /*margin: 0 auto;
+  /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret 1s step-end;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--primary-color);
+  }
 }
