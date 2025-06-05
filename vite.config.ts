@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/kuluders.github.io/",
+  base: "", // Change to empty string for root domain
   plugins: [react()],
   server: {
     host: true, // Listen on all network interfaces
