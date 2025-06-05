@@ -11,7 +11,6 @@ import {
   User,
 } from "iconoir-react";
 import { useTheme } from "../App";
-import resumePdf from "../assets/cv/resume.pdf";
 import logo from "../assets/logo-no-bg.svg"; // Import the SVG as a React component
 import "../styles/NavBar.scss";
 
@@ -74,6 +73,7 @@ Best regards,
       >
         <div className="navbar-logo">
           <img src={logo} className="logo-svg" />
+          <span className="tag">Under Construction</span>
         </div>
         <div className="navbar-email">
           <a href="mailto:klaudia.m.kreft@gmail.com">Send me an email </a>

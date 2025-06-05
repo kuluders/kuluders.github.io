@@ -1,6 +1,7 @@
 import React from "react";
 import { useTheme } from "../App";
 import "../styles/Data.scss";
+import { techLogos } from "../utils/logoResolver";
 import PortfolioCarousel from "./PortfolioCarousel";
 import { ScrollButton } from "./ScrollButton";
 import SquigglyLine from "./SquigglyLine";
@@ -8,7 +9,6 @@ import SquigglyLine from "./SquigglyLine";
 const Data: React.FC = ({}) => {
   const theme = useTheme().theme;
   const w = window.innerWidth;
-  console.log(`src/assets/logos/databricks-${theme}.svg`);
 
   return (
     <div className="data-container">
@@ -27,12 +27,12 @@ const Data: React.FC = ({}) => {
           <SquigglyLine width={0.8 * w} height={50} />{" "}
           <div className="data-gallery">
             <img
-              src={`src/assets/logos/databricks-${theme}.svg`}
+              src={techLogos[`databricks-${theme}`]}
               alt="Databricks"
               style={{ height: "70%" }}
             />
-            <img src="src/assets/logos/dynamo.svg" alt="DynamoDB" />
-            <img src="src/assets/logos/python.svg" alt="Python" />
+            <img src={techLogos.dynamo} alt="DynamoDB" />
+            <img src={techLogos.python} alt="Python" />
           </div>
         </div>
       </div>

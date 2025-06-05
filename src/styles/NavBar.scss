@@ -29,6 +29,36 @@
     filter: drop-shadow(0 0 1.5em #00000072);
   }
 
+  .tag {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: themes.themed("text", $theme-map);
+    background-color: themes.themed("highlight", $theme-map);
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    text-transform: uppercase;
+    animation: pulse 2s infinite;
+    margin-left: 1rem;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+  }
   .navbar-item {
     display: flex;
     gap: 0.5rem;

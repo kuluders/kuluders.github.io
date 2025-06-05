@@ -9,6 +9,7 @@ import { useState } from "react";
 import "../styles/PortfolioCarousel.scss";
 import "../styles/SharedModal.scss"; // Import shared modal styles
 import { awsIconsBaseUrl, projects, techStackIcons } from "../types/projects"; // Import projects
+import { techLogos } from "../utils/logoResolver";
 
 type PortfolioCarouselProps = {
   type: "data" | "frontend" | "software_architecture";
@@ -40,6 +41,20 @@ export default function PortfolioCarousel({ type }: PortfolioCarouselProps) {
     techStackIcons[service]
       ? `${awsIconsBaseUrl}${techStackIcons[service]}`
       : null;
+
+  const getLogoUrl = (tech: string): string => {
+    // Try AWS icons first
+    const awsIcon = getAwsIconUrl(tech);
+    if (awsIcon) return awsIcon;
+
+    // Try local tech logos
+    const localLogo = techLogos[tech];
+    if (localLogo) return localLogo;
+
+    // Fallback to lowercase tech name if no match found
+    console.warn(`No logo found for ${tech}`);
+    return techLogos["react"]; // or some default fallback logo
+  };
 
   const getRandomColor = (index: number): string => {
     const colors = ["#ff69b4", "#2e2c8f", "#7f95d1", "#ed9a32"]; // Pink, Dark Blue, Light Blue, Orange
@@ -111,9 +126,7 @@ export default function PortfolioCarousel({ type }: PortfolioCarouselProps) {
                 <h4 className="section-title">Tech Stack:</h4>
                 <div className="tech-stack">
                   {selectedProject.details.techStack.map((tech, i) => {
-                    const logoUrl =
-                      getAwsIconUrl(tech) ||
-                      `src/assets/logos/${tech.toLowerCase()}.svg`;
+                    const logoUrl = getLogoUrl(tech);
                     const tooltipColor = getRandomColor(i);
 
                     const StyledTooltip = styled(

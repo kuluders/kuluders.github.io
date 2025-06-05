@@ -3,6 +3,13 @@ import "../styles/Frontend.scss";
 import { ScrollButton } from "./ScrollButton";
 import SquigglyLine from "./SquigglyLine";
 
+// Import images
+import reactLogo from "../assets/logos/react.svg";
+import typescriptLogo from "../assets/logos/typescript.svg";
+import viteLogo from "../assets/logos/vite.svg";
+import sassLogo from "../assets/logos/sass.svg";
+import vueLogo from "../assets/logos/vue.svg";
+
 const Frontend: React.FC = ({}) => {
   const w = window.innerWidth;
 
@@ -19,13 +26,11 @@ const Frontend: React.FC = ({}) => {
           </span>
           <SquigglyLine width={0.8 * w} height={50} />{" "}
           <div className="tech-gallery">
-            <img src="src/assets/logos/react.svg" alt="React" />
-            <img src="src/assets/logos/typescript.svg" alt="TypeScript" />
-            <img src="src/assets/logos/vite.svg" alt="Vite" />
-            <img src="src/assets/logos/sass.svg" alt="CSS" />
-            {/* <img src="src/assets/logos/figma.svg" alt="Figma" /> */}
-            <img src="src/assets/logos/vue.svg" alt="Vue" />
-            {/* <img src="src/assets/logos/selenium.svg" alt="Selenium" /> */}
+            <img src={reactLogo} alt="React" />
+            <img src={typescriptLogo} alt="TypeScript" />
+            <img src={viteLogo} alt="Vite" />
+            <img src={sassLogo} alt="CSS" />
+            <img src={vueLogo} alt="Vue" />
           </div>
         </div>
       </div>
