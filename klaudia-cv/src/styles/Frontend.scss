@@ -1,0 +1,88 @@
+@use "themes";
+@include themes.themify(themes.$themes) using ($theme-map) {
+  .frontend-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: themes.themed("text", $theme-map);
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10vh;
+    .frontend-text-container {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .frontend-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+      h1 {
+        font-size: 3rem;
+        margin: 0;
+      }
+      h2 {
+        font-size: 2rem;
+        margin: 0;
+      }
+      p {
+        font-size: 1.3rem;
+        margin: 0;
+      }
+    }
+    .scroll-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      svg {
+        transition: transform 0.3s ease;
+        color: themes.themed("highlight", $theme-map);
+      }
+      &:hover svg {
+        transform: translateY(5px);
+      }
+    }
+  }
+
+  .tech-gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    img {
+      width: 50px;
+      height: 50px;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        animation: shake 0.8s ease;
+      }
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: scale(1) rotateZ(0);
+    }
+
+    25%,
+    75% {
+      transform: scale(1.2) rotateZ(25deg);
+    }
+
+    50% {
+      transform: scale(1.2) rotateZ(-25deg);
+    }
+  }
+}

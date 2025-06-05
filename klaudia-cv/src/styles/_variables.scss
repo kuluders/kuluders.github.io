@@ -1,0 +1,35 @@
+// Color Palette
+$pink: hsl(341, 100%, 75%);
+$dark-blue: #2e2c8f;
+$light-blue: #7f95d1;
+$orange: #ed9a32;
+$green: #4b9f6e;
+
+$light-theme: (
+  background: #fafafa,
+  navbar-bg: #d8d8d8,
+  text: #333333,
+  highlight: $orange,
+  primary: #646cff,
+  secondary: #61dafb,
+);
+
+$dark-theme: (
+  background: #1a1a1a,
+  navbar-bg: #333333,
+  text: #ffffff,
+  highlight: $pink,
+  primary: #bb86fc,
+  secondary: #03dac6,
+);
+
+$themes: (
+  light: $light-theme,
+  dark: $dark-theme,
+);
+
+// General Theme Variables (can be used in both themes)
+$font-family: sans-serif;
+$border-radius: 5px;
+
+@use "sass:math";

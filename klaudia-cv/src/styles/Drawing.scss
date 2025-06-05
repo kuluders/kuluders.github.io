@@ -1,0 +1,102 @@
+.drawing-container {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none; // Allows clicking through the container
+  .hat-container {
+    position: relative; // Ensure hats are stacked
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 3;
+    pointer-events: auto; // Enable pointer events for the hat
+
+    .hat-image {
+      position: absolute; // Stack hats on top of each other
+      bottom: 0;
+      right: 0;
+      width: auto; // Ensure hats fit the container
+      height: 100%;
+      // opacity: 0; // Default to hidden
+      transform-origin: bottom right; // Rotate around bottom-right corner
+      // transform: translate(100%, -100%); // Default off-screen position
+      // transition: opacity 0.5s ease, transform 0.5s ease; // Smooth transitions
+
+      &.active-hat {
+        opacity: 1; // Make the active hat visible
+        transform: translate(0, 0); // Position the active hat
+        animation: enter-hat 1s ease-out; // Enter animation
+      }
+      &.hand-down {
+        opacity: 0;
+      }
+
+      &.leaving-hat {
+        opacity: 0; // Fade out the leaving hat
+        transform: translate(100%, -100%); // Exit animation to top-right corner
+        animation: exit-hat 1s ease-in; // Exit animation
+      }
+
+      &.rotating-hand {
+        position: fixed; // Fixed position at bottom-right
+        bottom: 0;
+        right: 0;
+        transform-origin: bottom right; // Rotate around bottom-right corner
+        animation: none; // Remove static animation
+      }
+    }
+  }
+
+  @keyframes enter-hat {
+    from {
+      opacity: 0;
+      transform: translate(100%, -100%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes exit-hat {
+    from {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    to {
+      opacity: 0;
+      transform: translate(100%, -100%);
+    }
+  }
+
+  @keyframes rotate-hand {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .person-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      bottom: 0;
+      vertical-align: bottom;
+    }
+  }
+}

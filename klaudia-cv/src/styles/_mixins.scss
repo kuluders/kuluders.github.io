@@ -1,0 +1,13 @@
+@use "sass:map";
+
+@mixin themify($themes) {
+  @each $theme-name, $theme-map in $themes {
+    .theme-#{$theme-name} {
+      @content ($theme-map); // ✅ Pass theme map explicitly
+    }
+  }
+}
+
+@function themed($key, $theme-map) {
+  @return map.get($theme-map, $key);
+}

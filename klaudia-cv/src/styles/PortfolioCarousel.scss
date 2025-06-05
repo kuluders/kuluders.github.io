@@ -1,0 +1,137 @@
+@use "themes";
+@use "sass:math";
+@use "variables" as *; // Import variables
+
+@include themes.themify(themes.$themes) using ($theme-map) {
+  .portfolio-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .portfolio-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 4rem;
+  }
+
+  .carousel-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #007bff;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+
+  .carousel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 80%;
+  }
+
+  .project-card {
+    background: themes.themed("navbar-bg", $theme-map);
+    color: themes.themed("text", $theme-map);
+    padding: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    color: $light-blue;
+  }
+
+  .modal-content {
+    padding: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .feature-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 1rem;
+    color: #ccc;
+  }
+
+  .tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .tech-badge {
+    position: relative;
+    display: inline-block;
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $pink; // Default color
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      &.color-0 {
+        background-color: $pink;
+      }
+      &.color-1 {
+        background-color: $dark-blue;
+      }
+      &.color-2 {
+        background-color: $light-blue;
+      }
+      &.color-3 {
+        background-color: $orange;
+      }
+    }
+
+    &:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

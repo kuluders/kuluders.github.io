@@ -1,0 +1,63 @@
+@use "themes";
+@include themes.themify(themes.$themes) using ($theme-map) {
+  .builder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: themes.themed("text", $theme-map);
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10vh;
+    .builder-text-container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .builder-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+      h1 {
+        font-size: 3rem;
+        margin: 0;
+      }
+      h2 {
+        font-size: 2rem;
+        margin: 0;
+      }
+      p {
+        font-size: 1.3rem;
+        margin: 0;
+      }
+      .builder-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        color: themes.themed("highlight", $theme-map);
+      }
+    }
+    .scroll-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      svg {
+        transition: transform 0.3s ease;
+        color: themes.themed("highlight", $theme-map);
+      }
+      &:hover svg {
+        transform: translateY(5px);
+      }
+    }
+  }
+}
