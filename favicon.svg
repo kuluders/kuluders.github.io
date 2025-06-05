@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="377.95334"
+   height="377.95334"
+   viewBox="0 0 377.95334 377.95334"
+   sodipodi:docname="Logo-dark-noname.svg"
+   inkscape:export-filename="Logo-dark-noname-nobg.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:export-bgcolor="#ffffff00" />
+  <g
+     id="layer-MC0"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       id="g1"
+       transform="matrix(1.9204962,0,0,1.9204962,-178.20236,-132.85434)">
+      <path
+         id="path2"
+         d="m 0,0 h 24.54 l 15.788,22.753 1.234,1.786 24.546,35.442 -24.468,0.195 z"
+         style="fill:#2e3192;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="matrix(1.3333333,0,0,-1.3333333,92.684267,246.9784)" />
+      <path
+         id="path3"
+         d="M 0,0 H -24.54 L -58.06,48.313 V 0 h -20.92 v 59.877 l 37.339,0.299 z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="matrix(1.3333333,0,0,-1.3333333,289.28387,246.9784)" />
+      <path
+         id="path4"
+         d="M 0,0 -0.02,-0.026 37.32,-0.325 V 48.527 H 16.399 V 11.045 L -13.118,48.527 H -37.97 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="matrix(1.3333333,0,0,-1.3333333,147.61787,157.9752)" />
+      <path
+         id="path5"
+         d="M 0,0 -0.02,0.026 37.95,48.553 H 13.098 L -9.33,20.076 -16.419,11.071 v 0.02 l -8.9,-11.292 z"
+         style="fill:#f7931e;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="matrix(1.3333333,0,0,-1.3333333,234.30853,158.0748)" />
+    </g>
+  </g>
+</svg>
